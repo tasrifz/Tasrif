@@ -20,9 +20,9 @@ public class TestUncheckedException {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
     }
-     static void checkAge (int age) throws InvalidAgeException{
+     static void checkAge (int age) throws InvalidAgeException{  // method declaration // not handle exception
          if (age < 18) {
-             throw new InvalidAgeException("Not valid");
+             throw new InvalidAgeException("Not valid"); // create object or expession // inside the body
          } 
     }
     
