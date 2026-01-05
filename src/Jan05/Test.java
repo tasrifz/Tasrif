@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Jab05;
+package Jan05;
 
 import java.util.*;
 
@@ -20,16 +20,26 @@ public class Test {
         Person p5 = new Person(105,"Abdullah",22000.00 );
         
         
-        List l = (List) new ArrayList();
+        List<Person> l =  new ArrayList<>();
         l.add(p1);
         l.add(p2);
         l.add(p3);
         l.add(p4);
         l.add(p5);
-        for (Object l1 : l) {
+        for (Person l1 : l) {
             System.out.println(l1);
+               
+            
+            Set<Person> s = new LinkedHashSet<>();
+            s.add(p1);
+            s.add(p2);
+            s.add(p3);
+            s.add(p4);
+            s.add(p5);
+            for (Person s1 : s) {
+                System.out.println(s1);
+            }
         }
-        
         
     }
 }
