@@ -19,6 +19,10 @@ public class Employee {
         this.age = age;
     }
 
+    public Employee() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public int getId() {
         return id;
     }
