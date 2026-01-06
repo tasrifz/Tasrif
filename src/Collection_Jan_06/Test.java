@@ -50,5 +50,46 @@ public class Test {
             System.out.println(empList1);
       
         }
+         
+            /*---------------Set with Generics (Type Safe List)----------------*/
+          
+         System.out.println("::::Set with Generics HashSet:::::");
+         
+         Set <Employee> hasSet = new HashSet<>();
+         hasSet.add(e1);
+         hasSet.add(e2);
+         hasSet.add(e1); // duplicate
+         hasSet.add(e4);
+         hasSet.add(e5);
+         System.out.println(hasSet.size()); // size count duplicate also
+         System.out.println(hasSet.equals(l)); // false
+         System.out.println(hasSet.equals(hasSet));// true
+         
+         for (Employee hasSet1 : hasSet) {
+             System.out.println(hasSet1);
+        }
+         
+         System.out.println(":::: Set with Generics LinkedHashSet:::::");
+       
+        Set <Employee> linkedSet = new LinkedHashSet<>(); 
+        linkedSet.add(e1);
+        linkedSet.add(e1);
+        linkedSet.add(e3);
+        linkedSet.add(e4);
+        linkedSet.add(e5);
+        System.out.println(linkedSet.size()); //3 does't allow duplicate
+        System.out.println(linkedSet.equals(l)); // false ref difference
+        System.out.println(linkedSet.equals(linkedSet)); // true ref same
+        System.out.println(linkedSet.iterator()); // shows java.util.LinkedHashMap$LinkedKeyIterator@5c647e05
+     
+      System.out.println(":::: Iterator with Generics LinkedHashSet:::::");
+         
+         Iterator <Employee> it = linkedSet.iterator();
+         while (it.hasNext()) {
+           //  System.out.println(it.next());
+            // System.out.println(it.hasNext());// return 
+            
+        }
     }
+    
 }
