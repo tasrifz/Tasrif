@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/Tasrif/src/Collection_Jan_06/Employee.java</file>
-            <file>file:/E:/Tasrif/src/HomeJan06_01_2025/TestCustomException.java</file>
-            <file>file:/E:/Tasrif/src/HomeJan06_01_2025/TestUncheckedException.java</file>
-            <file>file:/E:/Tasrif/src/Collection_Jan_06/Test.java</file>
+            <file>file:/E:/Tasrif/src/jan07/employeemangement/model/Employee.java</file>
+            <file>file:/E:/Tasrif/src/jan07/employeemangement/dao/EmployeeDAO.java</file>
+            <file>file:/E:/Tasrif/src/jan07/employeemangement/Controller/EmployeeController.java</file>
+            <file>file:/E:/Tasrif/src/jan07/employeemangement/ui/EmployeeUI.java</file>
+            <file>file:/E:/Tasrif/src/jan07/employeemangement/services/EmployeeServices.java</file>
         </group>
     </open-files>
 </project-private>
