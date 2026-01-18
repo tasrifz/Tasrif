@@ -7,7 +7,7 @@ package jan07.employeemangement.services;
 
 
 import jan07.employeemangement.dao.EmployeeDAO;
-import jan07.employeemangement.model.Employee;
+import jan07.employeemangement.ui.Employee;
 
 /**
  *

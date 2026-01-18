@@ -6,7 +6,7 @@
 package jan07.employeemangement.Controller;
 
 
-import jan07.employeemangement.model.Employee;
+import jan07.employeemangement.ui.Employee;
 import jan07.employeemangement.services.EmployeeServices;
 
 /**

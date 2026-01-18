@@ -7,7 +7,6 @@ package jan07.employeemangement.ui;
 
 
 import jan07.employeemangement.Controller.EmployeeController;
-import jan07.employeemangement.model.Employee;
 
 
 
@@ -67,6 +66,12 @@ public class EmployeeUI extends javax.swing.JFrame {
         jLabel2.setText("    Id");
 
         jLabel3.setText("   First Name");
+
+        _fname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                _fnameActionPerformed(evt);
+            }
+        });
 
         jLabel5.setText("  Last Name");
 
@@ -211,7 +216,7 @@ public class EmployeeUI extends javax.swing.JFrame {
            e.setId(Integer.valueOf(_id.getText()));
            e.setFname(_fname.getText());
            e.setLname(_lname.getText());
-           e.setDesig(_desig.getText());
+           e.setDesig(_desig.getText());   
            e.setDept(_dept.getText());
            e.setSalary(Double.valueOf(_salary.getText()));
            e.setAge(Integer.valueOf(_age.getText()));
@@ -231,6 +236,10 @@ public class EmployeeUI extends javax.swing.JFrame {
            
                    
     }//GEN-LAST:event_jtnbtnActionPerformed
+
+    private void _fnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event__fnameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event__fnameActionPerformed
 
     /**
      * @param args the command line arguments
