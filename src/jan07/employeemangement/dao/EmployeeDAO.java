@@ -27,7 +27,7 @@ public class EmployeeDAO {
         double salary = e.getSalary();
         int age = e.getAge();
         String addr = e.getAddr();
-        String sql = "INSERT INTO EMPLOYEE (id, fname, lname , designation, department, salary,age, address) VALUES ('"+id+"','"+fn+"','"+ln+"','"+desig+"','"+dept+"','"+salary+"','"+age+"','"+addr+"')";
+        String sql = "INSERT INTO EMPLOYEE (id, fname, lname , designation, department, salary,age,address) VALUES ('"+id+"','"+fn+"','"+ln+"','"+desig+"','"+dept+"','"+salary+"','"+age+"','"+addr+"')";
         
          try {
             Connection con = DBConnection.getConnection();
