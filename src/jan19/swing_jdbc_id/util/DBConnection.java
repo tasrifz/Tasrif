@@ -5,7 +5,7 @@
  */
 package jan19.swing_jdbc_id.util;
 
-import static jan07.employeemangement.util.DBConnection.getConnection;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -30,12 +30,13 @@ public class DBConnection {
         System.out.print("Enter your  User Name : ");
         String userName = sc.next();
         String sql = "INSERT INTO m_test(user_id, user_name) VALUES('"+userId+"','"+userName+"')";
+        Connection con = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             String url = "jdbc:mysql://localhost:3306/test";
             String user = "root";
             String password = "root";
-            Connection con = DriverManager.getConnection(url, user, password);
+            con = DriverManager.getConnection(url, user, password);
             Statement stmt = con.createStatement();
             
             int Status = stmt.executeUpdate(sql);
@@ -63,8 +64,9 @@ public class DBConnection {
 
          String sqlUpdate = "UPDATE m_test SET user_name = ? WHERE user_id = ?";
 
-         try (Connection con = getConnection();
-          PreparedStatement ps = con.prepareStatement(sqlUpdate)) {
+         try {
+            
+            PreparedStatement ps = con.prepareStatement(sqlUpdate); 
             
             ps.setString(1, userName1); 
             ps.setInt(2, userId1);     
@@ -84,4 +86,6 @@ public class DBConnection {
         }
 
     }
+
+   
 }
