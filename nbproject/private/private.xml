@@ -2,16 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/E:/Tasrif/src/garmentserp/com/garments/erp/dao/ProductionDAO.java</file>
-            <file>file:/E:/Tasrif/src/garmentserp/com/garments/erp/util/DBConnection.java</file>
-            <file>file:/E:/Tasrif/src/garmentserp/com/garments/erp/dao/BuyerOrderDAO.java</file>
-            <file>file:/E:/Tasrif/src/garmentserp/com/garments/erp/model/Production.java</file>
-            <file>file:/E:/Tasrif/src/garmentserp/com/garments/erp/dao/EmployeeDAO.java</file>
-            <file>file:/E:/Tasrif/src/garmentserp/com/garments/erp/model/BuyerOrder.java</file>
-            <file>file:/E:/Tasrif/src/garmentserp/com/garments/erp/model/Employee.java</file>
-            <file>file:/E:/Tasrif/src/garmentserp/com/garments/erp/dao/InventoryDAO.java</file>
-            <file>file:/E:/Tasrif/src/garmentserp/com/garments/erp/model/Inventory.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
