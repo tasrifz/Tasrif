@@ -2,18 +2,10 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
-        <group/>
-=======
         <group>
-            <file>file:/D:/Java/JAVA/Tasrif/src/jan21/swing/RegistrationForm.java</file>
-            <file>file:/D:/Java/JAVA/Tasrif/src/jan21/swing/HomeForm.java</file>
-            <file>file:/D:/Java/JAVA/Tasrif/src/jan21/model/User.java</file>
-            <file>file:/D:/Java/JAVA/Tasrif/src/jan21/swing/WelcomeForm.java</file>
-            <file>file:/D:/Java/JAVA/Tasrif/src/jan21/util/DBConnection.java</file>
-            <file>file:/D:/Java/JAVA/Tasrif/src/jan21/swing/LogInForm.java</file>
-            <file>file:/D:/Java/JAVA/Tasrif/src/jan21/service/UserService.java</file>
+            <file>file:/E:/Tasrif/src/jan21/com/swing/model/User.java</file>
+            <file>file:/E:/Tasrif/src/jan21/com/swing/service/UserService.java</file>
+            <file>file:/E:/Tasrif/src/jan21/com/swing/util/DBConnection.java</file>
         </group>
->>>>>>> e814443320b20213660128d9ebe2908b3e0aba80
     </open-files>
 </project-private>
