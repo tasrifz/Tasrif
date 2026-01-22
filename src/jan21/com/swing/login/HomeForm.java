@@ -29,11 +29,13 @@ public class HomeForm extends javax.swing.JFrame {
 
         jButtonReg = new javax.swing.JButton();
         jButtonLogin = new javax.swing.JButton();
-        jHome = new javax.swing.JTextField();
+        jBtnHome = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jButtonReg.setBackground(new java.awt.Color(153, 153, 153));
         jButtonReg.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButtonReg.setForeground(new java.awt.Color(0, 102, 255));
         jButtonReg.setText("Registration");
         jButtonReg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -41,7 +43,9 @@ public class HomeForm extends javax.swing.JFrame {
             }
         });
 
+        jButtonLogin.setBackground(new java.awt.Color(153, 153, 153));
         jButtonLogin.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButtonLogin.setForeground(new java.awt.Color(0, 102, 255));
         jButtonLogin.setText("Log in");
         jButtonLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -49,35 +53,38 @@ public class HomeForm extends javax.swing.JFrame {
             }
         });
 
-        jHome.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jHome.setText("   Home");
+        jBtnHome.setBackground(new java.awt.Color(153, 153, 153));
+        jBtnHome.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jBtnHome.setForeground(new java.awt.Color(0, 102, 255));
+        jBtnHome.setText("Home");
+        jBtnHome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnHomeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButtonReg, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButtonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(99, 99, 99)
-                        .addComponent(jHome, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jBtnHome, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonReg, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(53, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jHome, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(jButtonReg, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(jButtonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jBtnHome, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
+                .addComponent(jButtonReg, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addComponent(jButtonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(74, Short.MAX_VALUE))
         );
 
         pack();
@@ -92,6 +99,12 @@ public class HomeForm extends javax.swing.JFrame {
             this.setVisible(false);
             new LogInForm().setVisible(true);
     }//GEN-LAST:event_jButtonLoginActionPerformed
+
+    private void jBtnHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnHomeActionPerformed
+        this.setVisible(false);
+        this.setVisible(true);
+        
+    }//GEN-LAST:event_jBtnHomeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,8 +143,8 @@ public class HomeForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBtnHome;
     private javax.swing.JButton jButtonLogin;
     private javax.swing.JButton jButtonReg;
-    private javax.swing.JTextField jHome;
     // End of variables declaration//GEN-END:variables
 }

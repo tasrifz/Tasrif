@@ -29,14 +29,36 @@ public class WelcomeForm extends javax.swing.JFrame {
     private void initComponents() {
 
         jwelcome = new javax.swing.JTextField();
+        jBtnLogOut = new javax.swing.JButton();
+        jBtnHome = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jwelcome.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jwelcome.setForeground(new java.awt.Color(0, 0, 255));
         jwelcome.setText("      Welcome to Employee Information");
         jwelcome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jwelcomeActionPerformed(evt);
+            }
+        });
+
+        jBtnLogOut.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jBtnLogOut.setForeground(new java.awt.Color(51, 51, 255));
+        jBtnLogOut.setText("Log Out");
+        jBtnLogOut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnLogOutActionPerformed(evt);
+            }
+        });
+
+        jBtnHome.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jBtnHome.setForeground(new java.awt.Color(102, 102, 255));
+        jBtnHome.setText("Back to Home");
+        jBtnHome.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jBtnHome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnHomeActionPerformed(evt);
             }
         });
 
@@ -46,15 +68,26 @@ public class WelcomeForm extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(36, 36, 36)
-                .addComponent(jwelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jBtnHome)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jBtnLogOut)
+                        .addGap(22, 22, 22))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jwelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(36, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jwelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(212, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 164, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBtnLogOut)
+                    .addComponent(jBtnHome))
+                .addGap(21, 21, 21))
         );
 
         pack();
@@ -63,6 +96,16 @@ public class WelcomeForm extends javax.swing.JFrame {
     private void jwelcomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jwelcomeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jwelcomeActionPerformed
+
+    private void jBtnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnLogOutActionPerformed
+        this.setVisible(false);
+        new LogInForm().setVisible(true);
+    }//GEN-LAST:event_jBtnLogOutActionPerformed
+
+    private void jBtnHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnHomeActionPerformed
+         this.setVisible(false);
+         new HomeForm().setVisible(true);
+    }//GEN-LAST:event_jBtnHomeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -100,6 +143,8 @@ public class WelcomeForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBtnHome;
+    private javax.swing.JButton jBtnLogOut;
     private javax.swing.JTextField jwelcome;
     // End of variables declaration//GEN-END:variables
 }

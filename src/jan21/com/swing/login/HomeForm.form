@@ -23,19 +23,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="29" pref="29" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButtonReg" alignment="0" min="-2" pref="318" max="-2" attributes="0"/>
-                          <Component id="jButtonLogin" min="-2" pref="318" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
-                      <Component id="jHome" min="-2" pref="178" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="jBtnHome" alignment="0" min="-2" pref="318" max="-2" attributes="0"/>
+                  <Component id="jButtonReg" alignment="0" min="-2" pref="318" max="-2" attributes="0"/>
+                  <Component id="jButtonLogin" min="-2" pref="318" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="53" max="32767" attributes="0"/>
           </Group>
@@ -44,13 +37,13 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-              <Component id="jHome" min="-2" pref="38" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-              <Component id="jButtonReg" min="-2" pref="63" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-              <Component id="jButtonLogin" min="-2" pref="63" max="-2" attributes="0"/>
-              <EmptySpace pref="68" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jBtnHome" min="-2" pref="48" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+              <Component id="jButtonReg" min="-2" pref="53" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+              <Component id="jButtonLogin" min="-2" pref="57" max="-2" attributes="0"/>
+              <EmptySpace pref="74" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -58,8 +51,14 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="jButtonReg">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="99" green="99" red="99" type="rgb"/>
+        </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="24" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Registration"/>
       </Properties>
@@ -69,8 +68,14 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButtonLogin">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="99" green="99" red="99" type="rgb"/>
+        </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="24" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Log in"/>
       </Properties>
@@ -78,13 +83,22 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonLoginActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jHome">
+    <Component class="javax.swing.JButton" name="jBtnHome">
       <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="36" style="1"/>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="99" green="99" red="99" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="   Home"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="24" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Home"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnHomeActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

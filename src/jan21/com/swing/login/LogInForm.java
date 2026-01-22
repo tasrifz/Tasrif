@@ -39,6 +39,7 @@ public class LogInForm extends javax.swing.JFrame {
         textpassword = new javax.swing.JPasswordField();
         btnLogin = new javax.swing.JButton();
         jTextField = new javax.swing.JTextField();
+        jBtnHome = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,7 +55,9 @@ public class LogInForm extends javax.swing.JFrame {
         jpassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jpassword.setText("Password");
 
+        btnLogin.setBackground(new java.awt.Color(153, 153, 153));
         btnLogin.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnLogin.setForeground(new java.awt.Color(0, 51, 255));
         btnLogin.setText("Log in");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,6 +70,16 @@ public class LogInForm extends javax.swing.JFrame {
         jTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldActionPerformed(evt);
+            }
+        });
+
+        jBtnHome.setBackground(new java.awt.Color(153, 153, 153));
+        jBtnHome.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jBtnHome.setForeground(new java.awt.Color(0, 102, 255));
+        jBtnHome.setText("Home");
+        jBtnHome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnHomeActionPerformed(evt);
             }
         });
 
@@ -92,7 +105,9 @@ public class LogInForm extends javax.swing.JFrame {
                             .addComponent(textusername, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(textpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(103, 103, 103)
+                        .addGap(12, 12, 12)
+                        .addComponent(jBtnHome)
+                        .addGap(18, 18, 18)
                         .addComponent(jTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(96, Short.MAX_VALUE))
         );
@@ -100,7 +115,9 @@ public class LogInForm extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBtnHome))
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -134,19 +151,19 @@ public class LogInForm extends javax.swing.JFrame {
         u.setPassword(password);   
         int status = new UserService().loginUser(u);
           if (status > 0) {
-              WelcomeForm wf = new WelcomeForm();
-              wf.setTitle("Home");
-              JLabel lbl = new JLabel();
-              lbl.setBounds(70, 50, 100, 140);
-              lbl.setText(username);
-              wf.add(lbl);
-              wf.setDefaultCloseOperation(EXIT_ON_CLOSE);
+              JOptionPane.showMessageDialog(rootPane, "Log in succesfull");
               this.setVisible(false);
+              WelcomeForm wf = new WelcomeForm();
               wf.setVisible(true);
           } else {
               JOptionPane.showMessageDialog(rootPane, "Username / password doesn't match");
         }
     }//GEN-LAST:event_btnLoginActionPerformed
+
+    private void jBtnHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnHomeActionPerformed
+         this.setVisible(false);
+         new HomeForm().setVisible(true);
+    }//GEN-LAST:event_jBtnHomeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -188,6 +205,7 @@ public class LogInForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
+    private javax.swing.JButton jBtnHome;
     private javax.swing.JTextField jTextField;
     private javax.swing.JLabel jUserName;
     private javax.swing.JLabel jpassword;
