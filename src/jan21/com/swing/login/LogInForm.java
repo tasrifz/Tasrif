@@ -22,6 +22,7 @@ public class LogInForm extends javax.swing.JFrame {
      */
     public LogInForm() {
         initComponents();
+        textusername.requestFocus(true);
     }
 
     /**
@@ -62,6 +63,11 @@ public class LogInForm extends javax.swing.JFrame {
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLoginActionPerformed(evt);
+            }
+        });
+        btnLogin.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btnLoginKeyPressed(evt);
             }
         });
 
@@ -164,6 +170,10 @@ public class LogInForm extends javax.swing.JFrame {
          this.setVisible(false);
          new HomeForm().setVisible(true);
     }//GEN-LAST:event_jBtnHomeActionPerformed
+
+    private void btnLoginKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnLoginKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnLoginKeyPressed
 
     /**
      * @param args the command line arguments
