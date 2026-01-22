@@ -5,6 +5,10 @@
  */
 package jan21.com.swing.login;
 
+import jan21.com.swing.model.User;
+import jan21.com.swing.service.UserService;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Tasrif Zaman
@@ -29,9 +33,9 @@ public class RegistrationForm extends javax.swing.JFrame {
 
         jTextField = new javax.swing.JTextField();
         jUserName = new javax.swing.JLabel();
-        jUsername = new javax.swing.JTextField();
+        textusername = new javax.swing.JTextField();
         jpassword = new javax.swing.JLabel();
-        jPassword = new javax.swing.JPasswordField();
+        textpassword = new javax.swing.JPasswordField();
         jButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -47,9 +51,9 @@ public class RegistrationForm extends javax.swing.JFrame {
         jUserName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jUserName.setText("User Name");
 
-        jUsername.addActionListener(new java.awt.event.ActionListener() {
+        textusername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jUsernameActionPerformed(evt);
+                textusernameActionPerformed(evt);
             }
         });
 
@@ -80,8 +84,8 @@ public class RegistrationForm extends javax.swing.JFrame {
                                 .addComponent(jUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jUsername, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jPassword, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(textusername, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(textpassword, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(94, 94, 94)
                         .addComponent(jButton, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -95,11 +99,11 @@ public class RegistrationForm extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textusername, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jButton)
                 .addContainerGap(56, Short.MAX_VALUE))
@@ -112,12 +116,32 @@ public class RegistrationForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldActionPerformed
 
-    private void jUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jUsernameActionPerformed
+    private void textusernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textusernameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jUsernameActionPerformed
+    }//GEN-LAST:event_textusernameActionPerformed
 
     private void jButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonActionPerformed
-        // TODO add your handling code here:
+         String username = textusername.getText();
+          if (username.equals("")) {
+             JOptionPane.showMessageDialog(rootPane, "Please Input Username");
+             textusername.requestFocus();
+          } else if(username.length() < 2){
+             JOptionPane.showMessageDialog(rootPane, "Please Input Username > 2");
+             textusername.requestFocus(); 
+        } else {
+              String password = textpassword.getText();
+              User u = new User();
+              u.setUsername(username);
+              u.setPassword(password);
+               int status = new UserService().addUser(u);
+                if (status > 0) {
+                   JOptionPane.showMessageDialog(rootPane,"User saved successfully");
+                   textusername.setText("");
+                   textpassword.setText("");
+                } else {
+                   JOptionPane.showMessageDialog(rootPane, "User couldn't saved");
+              }
+          }
     }//GEN-LAST:event_jButtonActionPerformed
 
     /**
@@ -157,10 +181,10 @@ public class RegistrationForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton;
-    private javax.swing.JPasswordField jPassword;
     private javax.swing.JTextField jTextField;
     private javax.swing.JLabel jUserName;
-    private javax.swing.JTextField jUsername;
     private javax.swing.JLabel jpassword;
+    private javax.swing.JPasswordField textpassword;
+    private javax.swing.JTextField textusername;
     // End of variables declaration//GEN-END:variables
 }

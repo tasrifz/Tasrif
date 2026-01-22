@@ -84,11 +84,13 @@ public class HomeForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegActionPerformed
-        // TODO add your handling code here:
+            this.setVisible(false);
+            new RegistrationForm().setVisible(true);
     }//GEN-LAST:event_jButtonRegActionPerformed
 
     private void jButtonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLoginActionPerformed
-            
+            this.setVisible(false);
+            new LogInForm().setVisible(true);
     }//GEN-LAST:event_jButtonLoginActionPerformed
 
     /**

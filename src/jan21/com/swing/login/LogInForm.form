@@ -27,7 +27,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="151" max="-2" attributes="0"/>
-                      <Component id="jButton" min="-2" pref="167" max="-2" attributes="0"/>
+                      <Component id="btnLogin" min="-2" pref="167" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -42,8 +42,8 @@
                       </Group>
                       <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jUsername" min="-2" pref="133" max="-2" attributes="0"/>
-                          <Component id="jPassword" min="-2" pref="133" max="-2" attributes="0"/>
+                          <Component id="textusername" min="-2" pref="133" max="-2" attributes="0"/>
+                          <Component id="textpassword" min="-2" pref="133" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -63,15 +63,15 @@
               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jUserName" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
-                  <Component id="jUsername" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                  <Component id="textusername" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="33" max="32767" attributes="0"/>
+              <EmptySpace pref="25" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jPassword" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                  <Component id="textpassword" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                   <Component id="jpassword" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-              <Component id="jButton" min="-2" max="-2" attributes="0"/>
+              <Component id="btnLogin" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -83,12 +83,12 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="User Name"/>
+        <Property name="text" type="java.lang.String" value="Username"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jUsername">
+    <Component class="javax.swing.JTextField" name="textusername">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jUsernameActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textusernameActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jpassword">
@@ -99,14 +99,17 @@
         <Property name="text" type="java.lang.String" value="Password"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JPasswordField" name="jPassword">
+    <Component class="javax.swing.JPasswordField" name="textpassword">
     </Component>
-    <Component class="javax.swing.JButton" name="jButton">
+    <Component class="javax.swing.JButton" name="btnLogin">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="18" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Log in"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLoginActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField">
